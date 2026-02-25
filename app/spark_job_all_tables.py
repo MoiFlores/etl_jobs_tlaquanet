@@ -64,7 +64,7 @@ def run_scd2_merge():
 
                 WHEN MATCHED AND tgt.display_name <> src.display_name THEN 
                     UPDATE SET
-                        tgt.to_date = CURRENT_TIMESATAMP(),
+                        tgt.to_date = CURRENT_TIMESTAMP(),
                         tgt.is_current = FALSE
                 WHEN NOT MATCHED THEN
                     INSERT (
